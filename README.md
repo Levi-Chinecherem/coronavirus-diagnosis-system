@@ -1,6 +1,8 @@
 # Coronavirus Diagnosis and Reporting System
 
-![Video Sample](https://github.com/Levi-Chinecherem/coronavirus-diagnosis-system/blob/main/sample%20outputs/covid_19.mp4)
+![Sample Image 1](https://github.com/Levi-Chinecherem/coronavirus-diagnosis-system/blob/main/sample%20outputs/p1.png)
+
+[Watch or Download Video](https://github.com/Levi-Chinecherem/coronavirus-diagnosis-system/blob/main/sample%20outputs/covid_19.mp4)
 
 The Coronavirus Diagnosis and Reporting System is a web application that allows users to perform symptom-based diagnosis for coronavirus and report their diagnosis results. It provides tools for tracking and visualizing diagnosis and symptom reports over time.
 
@@ -89,7 +91,6 @@ The application will be available at `http://localhost:8000/`.
 
 ## Sample Images
 
-![Sample Image 1](https://github.com/Levi-Chinecherem/coronavirus-diagnosis-system/blob/main/sample%20outputs/p1.png)
 ![Sample Image 2](https://github.com/Levi-Chinecherem/coronavirus-diagnosis-system/blob/main/sample%20outputs/p2.png)
 ![Sample Image 3](https://github.com/Levi-Chinecherem/coronavirus-diagnosis-system/blob/main/sample%20outputs/p3.png)
 ![Sample Image 4](https://github.com/Levi-Chinecherem/coronavirus-diagnosis-system/blob/main/sample%20outputs/p4.png)
