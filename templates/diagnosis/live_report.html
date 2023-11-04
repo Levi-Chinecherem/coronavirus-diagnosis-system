@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="card" style="position: relative; height:40vh; width:80vw">
+        <div class="card-body">
+            <h1 class="card-title">Live Report</h1>
+            <div class="chart-container" style=" height:80%; width:100%;">
+                <canvas id="liveReportChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const labels = {{ labels|safe }};
+    const datasets = {{ datasets|safe }};
+    const chartType = "{{ chart_type }}";
+
+    const ctx = document.getElementById('liveReportChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: chartType,
+        data: {
+            labels: labels,
+            datasets: datasets,
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: [
+                    {
+                        title: {
+                            display: true,
+                            text: 'Date',
+                        },
+                    },
+                ],
+                y: [
+                    {
+                        title: {
+                            display: true,
+                            text: 'Count',
+                        },
+                    },
+                ],
+            },
+        },
+    });
+</script>
+{% endblock %}

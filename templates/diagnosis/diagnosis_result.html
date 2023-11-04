@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">Diagnosis Result</h1>
+            <p class="card-text">{{ diagnosis.result }} <span class="emoji">&#128578;</span></p>
+
+            {% comment %} <h2 class="mt-4">Symptoms:</h2>
+            <div class="symptoms-grid">
+                {% for symptom in diagnosis.symptoms.all %}
+                    <div class="symptom-item">
+                        {{ symptom.name }}
+                    </div>
+                {% endfor %}
+            </div> {% endcomment %}
+
+            <p class="card-text">Date: {{ diagnosis.date|date:"F j, Y, g:i a" }} <span class="emoji">&#128578;</span></p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* CSS for the grid layout */
+    .symptoms-grid {
+        display: grid;
+        grid-template-columns
+    .symptoms-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+        gap: 10px; /* Adjust as needed */
+    }
+
+    .symptom-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .symptom-item input[type="checkbox"] {
+        margin-right: 5px;
+    }
+    
+</style>
+{% endblock %}
+    

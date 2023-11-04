@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">Your Reports</h1>
+            <ul class="list-group">
+                {% for report in reports %}
+                    <li class="list-group-item">
+                        <h2 class="card-subtitle mb-2 text-muted">Report for {{ report.diagnosis.user }} on {{ report.diagnosis.date }}</h2>
+                        <p class="card-text">{{ report.description }} <span class="emoji">&#128516;</span></p>
+                    </li>
+                {% empty %}
+                    <li class="list-group-item">No reports available.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

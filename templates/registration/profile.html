@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">User Profile</h1>
+            <p class="card-text"><strong>Username:</strong> {{ user.username }}</p>
+            <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+            <!-- Add a link to the change password view -->
+            <a href="{% url 'account:password_change' %}" class="btn btn-primary">Change Password</a>
+            <!-- Add a link to the logout view -->
+            <a href="{% url 'account:logout' %}" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

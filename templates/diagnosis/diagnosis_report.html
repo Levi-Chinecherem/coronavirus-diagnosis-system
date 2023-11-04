@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+
+    <div class="card mt-4 h-100">
+        <div class="card-body">
+            <h2 class="card-title">Report Symptoms</h2>
+            <form method="post" action="{% url 'diagnosis:diagnosis_report' %}">
+                {% csrf_token %}
+                <div class="symptoms-grid">
+                    {{ form.selected_symptoms.errors }}
+                    {% for field in form.selected_symptoms %}
+                        <div class="symptom-item">
+                            {{ field }}
+                            <label for="{{ field.id_for_label }}"></label>
+                        </div>
+                    {% endfor %}
+                </div>
+                
+                <div class="description-field">
+                    {{ form.description.label_tag }}
+                    {{ form.description }}
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* CSS for the grid layout */
+    .symptoms-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 4 columns */
+        gap: 10px; /* Adjust as needed */
+    }
+
+    .symptom-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .symptom-item input[type="checkbox"] {
+        margin-right: 5px;
+    }
+</style>
+{% endblock %}

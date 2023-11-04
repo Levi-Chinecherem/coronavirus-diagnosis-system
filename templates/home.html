@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}<br>
+
+<div class="jumbotron text-center bg-white">
+    <h1>Welcome to the Coronavirus Reporting System</h1>
+    <p class="lead">This system helps you diagnose and report your symptoms, providing valuable insights for your health and safety.</p>
+    <h3>Benefits:</h3>
+    <ul>
+        <li>Early detection of potential COVID-19 symptoms.</li>
+        <li>Efficient reporting for healthcare providers.</li>
+        <li>Tracking and monitoring of your health status.</li>
+    </ul>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <img src="{% static 'bg/bg2.jpg' %}" class="card-img-top" alt="Image 1">
+            <div class="card-body">
+                <h5 class="card-title">Symptom Checker</h5>
+                <p class="card-text">Use our symptom checker to assess your health condition.</p>
+            </div>
+        </div>
+    </div><br>
+
+    <div class="col-md-4">
+        <div class="card">
+            <img src="{% static 'bg/bg3.jpg' %}" class="card-img-top" alt="Image 2">
+            <div class="card-body">
+                <h5 class="card-title">Report Symptoms</h5>
+                <p class="card-text">Report your symptoms to help healthcare providers with accurate data.</p>
+            </div>
+        </div>
+    </div><br>
+
+    <div class="col-md-4">
+        <div class="card">
+            <img src="{% static 'bg/bg4.jpg' %}" class="card-img-top" alt="Image 3">
+            <div class="card-body">
+                <h5 class="card-title">View Diagnosis</h5>
+                <p class="card-text">View your diagnosis results for a better understanding of your health.</p>
+            </div>
+        </div>
+    </div>
+</div><br>
+
+
+<div class="container text-success">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Why We Need This System</h2>
+            <p>The Coronavirus Reporting System is crucial for tracking the spread of COVID-19 and providing quick diagnoses to those who may be infected.</p>
+            <p>Benefits include:</p>
+            <ul>
+                <li>Early detection and response to outbreaks</li>
+                <li>Timely medical advice and treatment</li>
+                <li>Reducing the burden on healthcare systems</li>
+                <li>Helping in the fight against the pandemic</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h2>How It Works</h2>
+            <p>Users can report their symptoms, and the system will provide a diagnosis based on the reported symptoms.</p>
+            <p>Users can also submit detailed reports for further medical attention and tracking.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
