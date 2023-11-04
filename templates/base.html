@@ -33,11 +33,8 @@
             <i class="virus-emoji">&#129440;</i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'diagnosis:home' %}">Home</a>
-                </li>
-
+            <ul class="navbar-nav ml-auto">
+                
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'diagnosis:diagnosis_report' %}">Take Diagnosis</a>
@@ -71,7 +68,7 @@
                 </li>
                 {% endif %}
             </ul>
-        </div>
+        </div>        
     </nav>
 
     <div class="container">

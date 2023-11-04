@@ -1,7 +1,6 @@
 # Coronavirus Diagnosis and Reporting System
 
-
-![Banner Image](link_to_banner_image)
+![My Video](your_video_url)
 
 The Coronavirus Diagnosis and Reporting System is a web application that allows users to perform symptom-based diagnosis for coronavirus and report their diagnosis results. It provides tools for tracking and visualizing diagnosis and symptom reports over time.
 
